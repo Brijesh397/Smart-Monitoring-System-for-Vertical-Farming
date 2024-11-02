@@ -1,0 +1,14 @@
+{
+  "board": "xiao_ble",
+  "boardRevision": "",
+  "boardDir": "c:/ncs/v2.6.0/zephyr/boards/arm/xiao_ble",
+  "shouldBuild": true,
+  "optimizations": "none",
+  "cmakeArgs": [],
+  "confFiles": [],
+  "buildDirectory": "build",
+  "kconfigFragments": [],
+  "snippets": [],
+  "dtcOverlays": [],
+  "extraDtcOverlays": []
+}
