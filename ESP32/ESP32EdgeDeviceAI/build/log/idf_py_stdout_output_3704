@@ -1,0 +1,90 @@
+[1/5] cmd.exe /C "cd /D D:\ESP32\ESP32EdgeDeviceAI\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ESP32/ESP32EdgeDeviceAI/build/partition_table/partition-table.bin D:/ESP32/ESP32EdgeDeviceAI/build/esp32_edge_device_ai.bin"
+esp32_edge_device_ai.bin binary size 0x1323f0 bytes. Smallest app partition is 0x177000 bytes. 0x44c10 bytes (18%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\ESP32\ESP32EdgeDeviceAI\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/ESP32/ESP32EdgeDeviceAI/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5430 bytes. 0x2bd0 bytes (34%) free.
+[2/3] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.3.1\components\esptool_pesptool.py --chip esp32s3 -p COM14 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dout --flash_freq 80m --flash_size detect 0x0 bootloader/bootloader.bin 0x10000 esp32_edge_device_ai.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM14
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.1)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_1v8)
+Crystal is 40MHz
+MAC: 34:85:18:a1:01:e8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 32MB
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00142fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21552 bytes to 13367...
+Writing at 0x00000000... (100 %)
+Wrote 21552 bytes (13367 compressed) at 0x00000000 in 0.6 seconds (effective 297.4 kbit/s)...
+Hash of data verified.
+Compressed 1254384 bytes to 834596...
+Writing at 0x00010000... (1 %)
+Writing at 0x0001de92... (3 %)
+Writing at 0x0002833c... (5 %)
+Writing at 0x0002d63e... (7 %)
+Writing at 0x00031d7a... (9 %)
+Writing at 0x00036555... (11 %)
+Writing at 0x0003ac58... (13 %)
+Writing at 0x000400f4... (15 %)
+Writing at 0x000446bd... (17 %)
+Writing at 0x00049356... (19 %)
+Writing at 0x0004da54... (21 %)
+Writing at 0x00052630... (23 %)
+Writing at 0x0005741d... (25 %)
+Writing at 0x0005c2dd... (27 %)
+Writing at 0x000612cd... (29 %)
+Writing at 0x000663ac... (31 %)
+Writing at 0x0006b758... (33 %)
+Writing at 0x00071588... (35 %)
+Writing at 0x00076ca6... (37 %)
+Writing at 0x0008123d... (39 %)
+Writing at 0x00087584... (41 %)
+Writing at 0x0008d777... (43 %)
+Writing at 0x00093e73... (45 %)
+Writing at 0x00099fd1... (47 %)
+Writing at 0x0009ff54... (49 %)
+Writing at 0x000a5b70... (50 %)
+Writing at 0x000aba66... (52 %)
+Writing at 0x000b1fe5... (54 %)
+Writing at 0x000b7ff5... (56 %)
+Writing at 0x000bd7b9... (58 %)
+Writing at 0x000c2644... (60 %)
+Writing at 0x000c796e... (62 %)
+Writing at 0x000cc7be... (64 %)
+Writing at 0x000d1bd1... (66 %)
+Writing at 0x000d6ecc... (68 %)
+Writing at 0x000dc4e2... (70 %)
+Writing at 0x000e24d8... (72 %)
+Writing at 0x000e7d9d... (74 %)
+Writing at 0x000edb8b... (76 %)
+Writing at 0x000f3897... (78 %)
+Writing at 0x000f90db... (80 %)
+Writing at 0x000fec00... (82 %)
+Writing at 0x00104c29... (84 %)
+Writing at 0x0010b0ab... (86 %)
+Writing at 0x00110561... (88 %)
+Writing at 0x0011a4e4... (90 %)
+Writing at 0x001226b6... (92 %)
+Writing at 0x00128e01... (94 %)
+Writing at 0x0013095e... (96 %)
+Writing at 0x00136a75... (98 %)
+Writing at 0x0013d00a... (100 %)
+Wrote 1254384 bytes (834596 compressed) at 0x00010000 in 21.7 seconds (effective 462.0 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.1 seconds (effective 482.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+y && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.3.1 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/ESP32/ESP32EdgeDeviceAI/build -P C:/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake"
